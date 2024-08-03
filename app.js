@@ -21,9 +21,10 @@ app.use("/api/v1/tasks", taskRouter);
 app.use(errorMiddleware)
 
 app.use(cors({
-    origin: [process.env.FRONTEMD_URL],
+    origin: [process.env.FRONTEND_URL],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials:true,
+    allowedHeaders: ["Content-Type", "Authorization"],
 }));
 
 
